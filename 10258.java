@@ -4,6 +4,10 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * @author ANDERSON BALLESTEROS
+ */
+ 
 class Main {
 
     public static class participante implements Comparable<participante> {
