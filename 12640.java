@@ -11,7 +11,7 @@ class Main {
     
     public static void main(String[] args) throws IOException {
         BufferedReader leer = new BufferedReader(new InputStreamReader(System.in));
-        while (true) {
+        while (leer.ready()) {
             String line[] = leer.readLine().split(" ");
             int max = 0, acum = 0, num;
             for (int i = 0; i < line.length; i++) {
