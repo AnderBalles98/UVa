@@ -1,8 +1,10 @@
-package UVa;
-
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.math.BigInteger;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 /**
  * @author ANDERSON BALLESTEROS
@@ -10,17 +12,13 @@ import java.util.*;
  
 class Main {
 
-    private static int reint(char c) {
-        return Integer.parseInt(c + "");
-    }
-
     public static void main(String[] args) throws IOException {
-        Scanner leer = new Scanner(System.in);
-        while (leer.hasNext()) {
+        BufferedReader leer = new BufferedReader(new InputStreamReader(System.in));
+        while (leer.ready()) {
             int num = 0;
-            while ((num = Integer.parseInt(leer.nextLine())) != 0) {
+            while ((num = Integer.parseInt(leer.readLine())) != 0) {
                 ArrayList<String> list = new ArrayList();
-                String g[] = leer.nextLine().split(" ");
+                String g[] = leer.readLine().split(" ");
                 list.addAll(Arrays.asList(g));
 
                 Collections.sort(list, (String o1, String o2) -> {
@@ -28,9 +26,8 @@ class Main {
                     BigInteger b = new BigInteger(o2+o1);
                     return b.compareTo(a);
                 });
-                Iterator it = list.iterator();
-                while (it.hasNext()) {
-                    System.out.print(it.next());
+                for (String element : list) {
+                   System.out.print(element); 
                 }
                 System.out.println();
             }
