@@ -14,24 +14,11 @@ class Main {
         int cases = Integer.parseInt(leer.readLine());
         for (int i = 0; i < cases; i++) {
             String line[] = leer.readLine().split(" ");
-            double x = Double.parseDouble(line[0]);
-            double y = Double.parseDouble(line[1]);
-            double z = Double.parseDouble(line[2]);
-            Double out = z/(x+y);
+            float x = Float.parseFloat(line[0]);
+            float y = Float.parseFloat(line[1]);
+            float z = Float.parseFloat(line[2]);
+            Float out = z/(x+y);
             out = out*((2*x)-y);
-            if (out<0) {
-                out=0.0;
-            }
-            if (out.doubleValue()>z) {
-                out=z;
-            }
-            String auxOut = ""+out;
-            int index = auxOut.indexOf(".");
-            auxOut = auxOut.substring(index+1);
-            
-            if (auxOut.indexOf("999999")==0) {
-                out++;
-            }
             System.out.println(out.intValue());
         }
     }
