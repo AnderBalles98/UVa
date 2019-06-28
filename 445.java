@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * @author Ánderson Ballesteros
+ * @author ANDERSON BALLESTEROS
  */
 public class Main {
 
